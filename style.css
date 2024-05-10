@@ -1,0 +1,76 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#game-area {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e0f7fa;
+    overflow: hidden;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.balloon {
+    position: absolute;
+    width: 60px; /* Set the desired width */
+    height: 85px; /* Set the desired height */
+    background-image: url('balloon.png'); /* Use balloon.png as background */
+    background-size: cover; /* Adjust the size of the image to cover the balloon */
+    border-radius: 50%/70%; /* Oval shape */
+    cursor: pointer;
+    animation: moveBalloon 5s linear infinite;
+}
+
+.blast {
+    position: absolute;
+    width: 60px;
+    height: 85px;
+    background: url('https://media.tenor.com/images/6870d1eaf5b5e3e68df2e09857de2b63/tenor.gif') no-repeat center;
+    background-size: cover;
+    animation: disappear 0.5s forwards;
+}
+
+@keyframes moveBalloon {
+    from {
+        top: 100vh;
+    }
+    to {
+        top: -85px;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: transparent; /* Make the footer background transparent */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: red;
+    text-decoration: none;
+}
